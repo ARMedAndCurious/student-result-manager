@@ -1,77 +1,135 @@
 # 🎓 Student Result Management System
 
-A full-stack web application for managing students, their subjects, and academic results.
+A full-stack Student Result Management System built using **React**, **Spring Boot**, and **PostgreSQL**. The application allows users to manage students, add subjects, calculate percentages, and generate academic results.
 
-## ✨ Features
-
-- Add Students
-- Delete Students
-- Add Subjects to Students
-- View Student Subjects
-- Calculate Percentage Automatically
-- PASS / FAIL Status
-- Modern Responsive UI
-- Navigation using React Router
-- RESTful API Integration
+> 🚀 **Live Frontend Demo:**  
+> https://student-result-manager-flame.vercel.app/
 
 ---
 
-## 🛠 Tech Stack
+
+# ✨ Features
+
+- ➕ Add Students
+- 🗑️ Delete Students
+- 📚 Add Subjects
+- 📊 Automatic Percentage Calculation
+- ✅ PASS / FAIL Result
+- 📋 View Student Result
+- 🎨 Modern Responsive UI
+- ⚡ React Router Navigation
+- 🔄 REST API Integration
+
+---
+
+# 🛠 Tech Stack
 
 ### Frontend
+
 - React
 - React Router DOM
 - Axios
-- CSS3
+- CSS
 
 ### Backend
+
 - Spring Boot
 - Spring Data JPA
 - Hibernate
 
 ### Database
+
 - PostgreSQL
 
 ---
 
-## 📂 Project Structure
+# 📂 Project Structure
 
 ```
-Frontend
-├── Components
-├── Pages
-├── Services
-└── App.jsx
-
-Backend
-├── Controller
-├── Service
-├── Repository
-├── Entity
-└── Exception Handling
+student-result-manager
+│
+├── student-result-backend
+│     └── Spring Boot REST API
+│
+└── student-result-frontend
+      └── React Application
 ```
 
 ---
 
+# 📡 REST API
 
+## Student APIs
 
-## 🚀 Getting Started
+| Method | Endpoint |
+|---------|----------|
+| GET | `/api/students` |
+| POST | `/api/students` |
+| DELETE | `/api/students/{id}` |
 
-### Backend
+---
+
+## Subject APIs
+
+| Method | Endpoint |
+|---------|----------|
+| POST | `/api/students/{studentId}/subjects` |
+| GET | `/api/students/{studentId}/subjects` |
+
+---
+
+## Result API
+
+| Method | Endpoint |
+|---------|----------|
+| GET | `/api/students/{studentId}/subjects/result` |
+
+---
+
+# 🧠 Concepts Practiced
+
+## React
+
+- Functional Components
+- Props
+- useState
+- useEffect
+- Conditional Rendering
+- Component Communication
+- React Router
+- Axios
+- Component-based Architecture
+
+## Spring Boot
+
+- REST Controllers
+- Service Layer
+- Repository Layer
+- DTOs
+- Exception Handling
+- Dependency Injection
+- Validation
+- JPA Relationships
+- Hibernate
+
+## Database
+
+- PostgreSQL
+- One-to-Many Relationship
+- Entity Mapping
+
+---
+
+# 🚀 Running Locally
+
+## Backend
 
 ```bash
-cd StudentResultManager
-```
-
-Configure PostgreSQL in `application.yml`.
-
-Run:
-
-```bash
+cd student-result-backend/StudentResultManager
 mvn spring-boot:run
 ```
 
-Backend runs on:
+Runs on:
 
 ```
 http://localhost:8080
@@ -79,25 +137,15 @@ http://localhost:8080
 
 ---
 
-### Frontend
+## Frontend
 
 ```bash
-cd student-result-frontend
-```
-
-Install dependencies:
-
-```bash
+cd student-result-frontend/student-result-frontend
 npm install
-```
-
-Run:
-
-```bash
 npm run dev
 ```
 
-Frontend runs on:
+Runs on:
 
 ```
 http://localhost:5173
@@ -105,51 +153,38 @@ http://localhost:5173
 
 ---
 
-## 📡 API Endpoints
+# 🌐 Deployment
 
-### Students
+| Service | Platform |
+|----------|----------|
+| Frontend | Vercel |
+| Backend | Local Development |
+| Database | PostgreSQL |
 
-| Method | Endpoint | Description |
-|---------|----------|-------------|
-| GET | `/api/students` | Get all students |
-| POST | `/api/students` | Add student |
-| DELETE | `/api/students/{id}` | Delete student |
-
-### Subjects
-
-| Method | Endpoint | Description |
-|---------|----------|-------------|
-| POST | `/api/students/{studentId}/subjects` | Add subject |
-| GET | `/api/students/{studentId}/subjects` | Get all subjects |
-
-### Results
-
-| Method | Endpoint | Description |
-|---------|----------|-------------|
-| GET | `/api/students/{studentId}/subjects/result` | Get student result |
+> **Note:**  
+> The live demo currently showcases the frontend interface. The backend is configured for local development, so features requiring the Spring Boot API (such as loading or modifying student data) will work when the backend is running locally.
 
 ---
 
-## 📚 Concepts Practiced
+# 📚 Future Improvements
 
-- React Functional Components
-- Props
-- useState
-- useEffect
-- React Router
-- Conditional Rendering
-- Component Communication
-- CRUD Operations
-- REST APIs
-- Axios
-- Spring Boot
-- JPA & Hibernate
-- PostgreSQL Integration
+- Spring Security + JWT Authentication
+- Full-stack Cloud Deployment
+- Search & Filter Students
+- Edit Student Details
+- Edit Subject Details
+- Pagination
+- Dashboard Analytics
 
 ---
 
-## 👩‍💻 Author
+# 👩‍💻 Author
 
 **Akshara Jain**
 
 GitHub: https://github.com/ARMedAndCurious
+
+
+
+
+⭐ If you found this project interesting, feel free to star the repository!
