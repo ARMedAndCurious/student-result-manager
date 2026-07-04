@@ -9,7 +9,10 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/students")
-@CrossOrigin(origins = "http://localhost:5174")
+@CrossOrigin(origins = {
+        "http://localhost:5173",
+        "http://localhost:5174"
+})
 public class StudentController {
 
     private final StudentService studentService;

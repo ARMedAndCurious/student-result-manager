@@ -12,7 +12,7 @@ import java.util.Map;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/students/{studentId}/subjects")
-@CrossOrigin("http://localhost:5174")
+@CrossOrigin("http://localhost:5173")
 public class SubjectController {
 
     private final  SubjectService subjectService;
@@ -30,7 +30,7 @@ public class SubjectController {
         return ResponseEntity.ok(subjectService.findSubjectByStudentId(studentId));
     }
 
-    @GetMapping("/{result}")
+    @GetMapping("/result")
     public ResponseEntity<Map<String, Object>> getResult(@PathVariable Integer studentId) {
         return ResponseEntity.ok(subjectService.getResult(studentId));
     }
